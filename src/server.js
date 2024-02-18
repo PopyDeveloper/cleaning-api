@@ -39,7 +39,7 @@ fastify.put("/updateUser/:id", async (request, reply) => {
 try {
   await fastify.listen({
     host: "0.0.0.0",
-    port: 3000,
+    port: process.env.PORT ?? 3333,
   });
 } catch (e) {
   fastify.log.error(e);
