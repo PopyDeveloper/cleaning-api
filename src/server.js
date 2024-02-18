@@ -1,10 +1,14 @@
 import Fastify from "fastify";
 import { DataBase } from "./database-postgres.js";
+import cors from "@fastify/cors";
+
+const db = new DataBase();
+
 const fastify = Fastify({
   logger: true,
 });
 
-const db = new DataBase();
+await fastify.register(cors, { origin: false });
 
 fastify.get("/", async () => {
   const list = await db.list();
