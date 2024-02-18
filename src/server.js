@@ -8,7 +8,7 @@ const fastify = Fastify({
   logger: true,
 });
 
-await fastify.register(cors, { origin: false });
+await fastify.register(cors, { origin: "*" });
 
 fastify.get("/", async () => {
   const list = await db.list();
