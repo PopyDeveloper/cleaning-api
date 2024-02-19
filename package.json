@@ -6,17 +6,22 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch --no-warnings --trace-warnings ./src/server.js"
+    "dev": "npx tsx watch src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^9.0.1",
+    "@prisma/client": "^5.9.1",
     "fastify": "^4.26.1",
     "postgres": "^3.4.3"
   },
   "devDependencies": {
-    "dotenv": "^16.4.4"
+    "@types/node": "^20.11.19",
+    "dotenv": "^16.4.4",
+    "prisma": "^5.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
